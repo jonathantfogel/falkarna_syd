@@ -1,0 +1,121 @@
+﻿body {
+    margin: 140px 0px 0px 0px;
+    background: rgb(255,255,255);
+}
+a{
+    color: initial;
+    text-decoration: none;
+}
+.float-right{
+    float: right !important;
+}
+
+header{
+    display: table; z-index: 99;
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 140px; box-sizing: border-box;
+}
+.headerSection{
+    display: table;
+    position: relative;
+    width: 100%; height: 50%; box-sizing: border-box;
+    margin: auto;
+}
+.headerPush{
+    display: table-cell; vertical-align: middle;
+    position: relative;
+    height: 100%;
+}
+.headerWrap {
+    display: table;
+    position: relative;
+    width: 400px;
+    margin: auto;
+}
+.headerPush nav {
+    display: table;
+    position: relative;
+    margin: auto;
+}
+.menuBtn{
+    float: left;
+    padding: 5px 10px; margin: 0px 12px;
+    font-family: Gravity; font-size: 18px;
+    color: rgb(60,60,60);
+}
+.menuBtn:hover{
+    color: rgb(120,120,120)!important;
+}
+#logo{
+    float: left;
+    width: 162px; height: 40px;
+    background: url(/Resources/Common/falkarna-logo.png) no-repeat center center / contain;
+}
+#title{
+    height: 40px;
+    color: black; font-family: 'NEXT ART'; font-size: 25px;
+    text-indent: 20px; line-height: 40px; font-weight: bold;
+}
+
+
+
+main{
+    display: table;
+    position: relative;
+    width: 980px; box-sizing: border-box;
+    margin: auto;
+}
+
+
+
+
+/*SCROLL*/
+header.scroll{
+    height: 70px;
+    background: rgb(245,245,245);
+    transition: background 1s;
+}
+.headerSection.scroll{
+    float: left;
+    width: auto; height: inherit;
+    background: transparent !important;
+    transition: height 1s;
+}
+
+
+.promotionWrap {
+    display: table-cell; vertical-align: middle;
+    position: relative;
+    height: 100%;
+}
+.promotionBtn{
+    display: none;
+    right: 0px;
+    height: 120px; width: 120px;
+    margin: 0px 10px;
+    border-radius: 50%;
+}
+.promotionBtn.real{
+    display: table; z-index: 100;
+    position: fixed; top: 10px; right: 10px;
+    background: linear-gradient(rgb(0,0,0), rgb(30,30,30)) !important;
+    color: white; font-family: 'NEXT ART'; font-size: 14px; font-weight: bold;
+    text-align: center;
+}
+.promotionBtn.real:hover{
+    background: linear-gradient(rgb(30,30,30), rgb(60,60,60)) !important;
+    cursor: pointer;
+}
+.promotionBtn.scroll {
+    display: table;
+    top: 0;right: 0;
+    height: 70px; width: 150px;
+    border-radius: 0;
+}
+
+
+@media screen and (max-width: 1000px){
+    main{
+        width: 100%;
+    }
+}
