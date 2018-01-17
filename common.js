@@ -2,11 +2,14 @@
 var headerSection = document.getElementsByClassName("headerSection");
 var promotionBtn = document.getElementsByClassName("promotionBtn");
 var promoPlaceholder = document.getElementById("promoPlaceholder");
+var backImg = document.getElementsByClassName("background");
+
+var images = ["back1.jpg", "back2.jpg"];
 
 /*var currentScrollPos = document.documentElement.scrollTop;
 var isTrue = true;*/
 
-document.body.onscroll = function () {
+/*document.body.onscroll = function () {
     if (document.documentElement.clientWidth > 1000) {
         if (document.documentElement.scrollTop > 0) {
             for (var i = 0; i < headerSection.length; i++) {
@@ -31,7 +34,7 @@ document.body.onscroll = function () {
             header.style.position = "absolute";
             header.style.top = "0";
         }
-    }
+    }*/
     /*if (document.documentElement.scrollTop < currentScrollPos) {
         if (isTrue == true) {
             header.style.position = "absolute";
@@ -42,4 +45,11 @@ document.body.onscroll = function () {
         istrue = true;
     }
     currentScrollPos = document.documentElement.scrollTop;*/
+
+document.body.onscroll = function () {
+    if (document.documentElement.scrollTop > 0) {
+        header.classList.add("scroll");
+    } else {
+        header.classList.remove("scroll")
+    }
 }

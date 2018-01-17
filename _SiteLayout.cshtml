@@ -9,22 +9,21 @@
     </head>
     <body>
         <header>
-            <div class="headerSection" style="background-color: white;">
+            <div class="headerSection scroll" style="background-color: white;">
                 <div class="headerPush">
                     <a href="/index.cshtml">
                         <div class="headerWrap">
-                            <div id="logo"></div>
-                            <div id="title">Falkarna Syd</div>
+                            <div class="logo"></div>
+                            <div class="title">Falkarna Syd</div>
                         </div>
                     </a>
                 </div>
             </div>
-            <div class="promotionBtn float-right" id="promoPlaceholder">
+            <div class="promotionBtn float-right scroll" id="promoPlaceholder">
             </div>
-            <div class="headerSection" style="background-color: rgb(250,250,250);">
+            <div class="headerSection scroll float-right" style="background-color: rgb(250,250,250);">
                 <div class="headerPush">
                     <nav>
-                        <a href="/index.cshtml"><div class="menuBtn">Hem</div></a>
                         <a href="#"><div class="menuBtn">Diskussion</div></a>
                         <a href="http://falkarna.quickbutik.com" target="_blank"><div class="menuBtn">Webbshop</div></a>
                     </nav>
@@ -32,14 +31,49 @@
             </div>
         </header>
         <a href="https://apply.cardskipper.se/eid" target="_blank">
-            <div class="promotionBtn real">
+            <div class="promotionBtn real scroll">
                 <div class="promotionWrap">
                     Gå med idag!
                 </div>
             </div>
         </a>
+        <div class="background"></div>
         <main>
             @RenderBody()
         </main>
+        <footer>
+            <div class="pageWidth fullHeight">
+                <div class="footerPush">
+                    <div class="footerContentWrap">
+                        <div class="footerTitle">
+                            <a href="/index.cshtml">
+                                <div class="footerLogo"></div>
+                                <!--<div class="title">Falkarna Syd</div>-->
+                            </a>
+                        </div>
+                        <div class="footerPush">
+                            <table class="contactInfo float-right">
+                                <tr>
+                                    <td>E-Postadress</td>
+                                    <td>falkarna@falkarna-ofk.se</td>
+                                </tr>
+                                <tr>
+                                    <td>Medlemskap</td>
+                                    <td>123 287 67 79</td>
+                                </tr>
+                                <tr>
+                                    <td>Försäljning</td>
+                                    <td>123 274 01 40</td>
+                                </tr>
+                                <tr>
+                                    <td>Tifo och övriga bidrag</td>
+                                    <td>123 560 02 67</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
