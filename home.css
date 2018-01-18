@@ -82,7 +82,7 @@ section h1{
 .navBtn.prev{
     left: 0;
 }
-#imgIdx{
+.imgIdx{
     position: absolute; bottom: 5px; left: calc(50% - 5px);
     width: 50px; height: 20px;
     font-family: Gravity; font-size: 15px; color: white; text-shadow: 0px 0px 5px rgba(0,0,0,0.6);

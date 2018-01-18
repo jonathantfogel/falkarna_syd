@@ -6,8 +6,9 @@ var backImg = document.getElementsByClassName("background");
 var mediaCanvasCont = document.getElementById("mediaCanvasCont");
 var mediaCanvas = document.getElementById("mediaCanvas");
 
+var backupidx;
 var imgIdx = 0;
-var imgCanvas = document.getElementById("imgCanvas");
+var imgCanvas = document.getElementsByClassName("imgCanvas");
 var imgGallery = [
     "gal1.jpg",
     "gal2.jpg",
@@ -22,7 +23,7 @@ var imgGallery = [
     "gal11.jpg",
 ];
 var galIdx = 0;
-var imgIdxel = document.getElementById("imgIdx");
+var imgIdxel = document.getElementsByClassName("imgIdx");
 
 slideShow(false);
 
@@ -86,21 +87,28 @@ function slideShow(x) {
     setTimeout(slideShow, 5000);
 }
 
-function nextImg() {
+function nextImg(canvasidx) {
     galIdx++;
     if (galIdx > imgGallery.length - 1) { galIdx = 0 }
-    imgCanvas.style.backgroundImage = "url(Resources/Gallery/gal" + (galIdx + 1) + ".jpg)";
-    imgIdxel.innerHTML = (galIdx + 1) + "/" + imgGallery.length;
+    imgCanvas[canvasidx].style.backgroundImage = "url(Resources/Gallery/gal" + (galIdx + 1) + ".jpg)";
+    imgIdxel[canvasidx].innerHTML = (galIdx + 1) + "/" + imgGallery.length;
 }
-function prevImg() {
+function prevImg(canvasidx) {
     galIdx--;
     if (galIdx < 0) { galIdx = imgGallery.length - 1 }
-    imgCanvas.style.backgroundImage = "url(Resources/Gallery/gal" + (galIdx + 1) + ".jpg)";
-    imgIdxel.innerHTML = (galIdx + 1) + "/" + imgGallery.length;
+    imgCanvas[canvasidx].style.backgroundImage = "url(Resources/Gallery/gal" + (galIdx + 1) + ".jpg)";
+    imgIdxel[canvasidx].innerHTML = (galIdx + 1) + "/" + imgGallery.length;
 }
 
 function openCanvas() {
+    backupidx = galIdx;
     document.body.style.overflow = "hidden";
     mediaCanvasCont.style.display = "block";
     mediaCanvas.style.backgroundImage = "url(Resources/Gallery/gal" + (galIdx + 1) + ".jpg)";
+}
+function closeCanvas() {
+    galIdx = backupidx;
+    document.body.style.overflow = "initial";
+    mediaCanvasCont.style.display = "none";
+    mediaCanvas.style.backgroundImage = "";
 }

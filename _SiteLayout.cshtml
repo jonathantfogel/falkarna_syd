@@ -44,10 +44,11 @@
         <div id="mediaCanvasCont">
             <div id="mediaCanvasWrap">
                 <div id="mediaCanvasPush">
-                    <div id="mediaCanvas">
-                        <div class="navBtn next" onclick="nextImg()">&#9658;</div>
-                        <div class="navBtn prev" onclick="prevImg()">&#9668;</div>
-                        <div id="imgIdx">1/11</div>
+                    <div id="mediaCanvas" class="imgCanvas">
+                        <div class="navBtn next" onclick="nextImg(0)">&#9658;</div>
+                        <div class="navBtn prev" onclick="prevImg(0)">&#9668;</div>
+                        <div class="closeBtn" onclick="closeCanvas()">&times;</div>
+                        <div class="imgIdx">1/11</div>
                     </div>
                 </div>
             </div>
