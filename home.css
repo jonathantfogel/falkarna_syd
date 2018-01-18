@@ -1,4 +1,10 @@
-﻿section{
+﻿#pageTitle{
+    display: table;
+    padding: 20px 30px;
+    background: white;
+}
+
+section{
     display: table;
     position: relative;
     width: 100%; box-sizing: border-box;
@@ -23,25 +29,35 @@ section.dark .sectionTitle.sub{
     width: 1200px;
     margin-top: -250px;
 }
+.sectionTitle{
+    margin-top: 20px;
+    font-family: 'The Next Font'; font-size: 40px;
+    line-height: 50px; 
+}
 section h1{
     padding: 0px; margin: 0px;
     font-family: 'The Next Font'; font-size: 35px;
     line-height: 40px; 
 }
+.sectionTitle.sub{
+    margin: 10px 0px;
+    font-family: Gravity; font-size: 15px; color: rgb(90,90,90);
+    line-height: 15px; text-transform: uppercase; font-weight: bold; text-indent: 10px;
+}
+
 .content{
     display: table;
     position: relative;
     width: 100%;
     margin-top: 25px; margin-bottom: 25px;
 }
-
-#pageTitle{
-    display: table;
-    padding: 20px 30px;
-    background: white;
+.content.wide{
+    width: 100%;
 }
-.content.top{
-    
+.content p{
+    font-family: Gravity; font-size: 16px; color: rgb(40,40,40);
+    line-height: 1.6;
+
 }
 .content.wrap{
     width: 500px;
@@ -57,6 +73,8 @@ section h1{
     width: calc(100% - 560px); height: 400px; box-sizing: border-box;
     padding: 50px;
 }
+
+
 #imgCanvas{
     display: table;
     position: relative;
@@ -122,29 +140,6 @@ section h1{
 
 
 
-.sectionTitle{
-    margin-top: 20px;
-    font-family: 'The Next Font'; font-size: 40px;
-    line-height: 50px; 
-}
-.sectionTitle.sub{
-    margin: 10px 0px;
-    font-family: Gravity; font-size: 15px; color: rgb(90,90,90);
-    line-height: 15px; text-transform: uppercase; font-weight: bold; text-indent: 10px;
-}
-.content{
-    display: table;
-    position: relative;
-    width: 100%;
-}
-.content.wide{
-    width: 100%;
-}
-.content p{
-    font-family: Gravity; font-size: 16px; color: rgb(40,40,40);
-    line-height: 1.6;
-
-}
 .galleryImgCont{
     display: table; float: left;
     position: relative;
@@ -184,36 +179,112 @@ section h1{
 }
 
 
+@media screen and (max-width: 1300px){
+    .sectionWrap.top{
+        width: 980px; box-sizing: border-box;
+    }
+    .content.wrap{
+        width: 400px; box-sizing: border-box;
+    }
+    .contentImg{
+        width: calc(100% - 460px);
+    }
+}
 @media screen and (max-width: 1000px){
-    .content{
-        width: calc(100% - 165px);
+    .sectionWrap.top{
+        width: calc(100% - 200px);
+        margin-left: auto; margin-right: auto;
+    }
+    .sectionWrap{
+        width: 100%;
+    }
+    .sectionWrap.pad{
+        box-sizing: border-box;
+        padding: 30px;
+    }
+    .content.top{
+        
+    }
+    .content.wrap{
+        width: 100%;
+    }
+    .contentImg{
+        position: relative; top: auto;
+        width: 100%; height: auto;
+        padding: 30px;
+    }
+    #imgCanvas{
+        height: auto;
+        padding-bottom: 56.25%;
+    }
+}
+@media screen and (max-width: 850px){
+    .galleryImgCont{
+        width: calc(33.333% - 14px);
     }
 }
 @media screen and (max-width: 720px){
-    .sectionTitle{
-        text-indent: 20px;
+    .sectionWrap.top{
+        width: calc(100% - 100px);
     }
-    .content{
-        width: calc(100% - 40px);
-    }
-    .content.wide{
-        width: calc(100% - 40px);
+    section h1{
+        font-size: 30px;
     }
     .galleryImgWrap.text {
-        font-size: 17px;
+        font-size: 15px;
     }
+    .galleryImg{
+        padding-bottom: 75%;
+    }
+    .conteImg{
+        padding: 20px;
+    }
+    #imgCanvas{
+        padding-bottom: 75%;
+    }
+
 }
 @media screen and (max-width: 600px) {
+    .sectionWrap.top{
+        width: calc(100% - 50px);
+    }
+    #pageTitle{
+        padding: 15px 25px;
+    }
+    section h1{
+        font-size: 25px;
+    }
+    .content{
+        margin: 20px 0px;
+    }
+    .content p{
+        font-size: 13px;
+    }
     .galleryImgCont{
         width: calc(50% - 14px);
     }
 }
 @media screen and (max-width: 500px){  
+    .sectionWrap.top{
+        width: calc(100% - 20px);
+    }
+    #pageTitle{
+        padding: 10px 20px;
+    }
+    section h1{
+        font-size: 20px;
+    }
+    .sectionWrap.pad{
+        padding: 20px;
+    }
+    .content{
+        margin: 15px 0px;
+    }
     .content p{
-        font-size: 15px;
+        font-size: 13px;
     }
     .galleryImgWrap.text {
-        font-size: 15px;
+        font-size: 12px;
     }
 }
 @media screen and (max-width: 400px) {
@@ -221,10 +292,7 @@ section h1{
         width: calc(50% - 10px);
         margin: 5px;
     }
-    .galleryImg{
-        padding-bottom: 40%;
-    }
     .galleryImgWrap.text {
-        font-size: 12px;
+        font-size: 9px;
     }
 }

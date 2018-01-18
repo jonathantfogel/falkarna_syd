@@ -103,7 +103,7 @@ main{
 #mediaCanvasWrap{
     display: table;
     position: relative;
-    width: calc(100% - 200px); height: 100%;
+    /*width: calc(100% - 200px); */height: 100%;
     margin: auto;
 }
 #mediaCanvasPush{
@@ -114,7 +114,7 @@ main{
 #mediaCanvas{
     display: table;
     position: relative;
-    width: 100%; height: calc(100% - 150px);
+    width: 100%; /*height: calc(100% - 150px);*/
     background: black no-repeat center center / contain;
 }
 .closeBtn{
@@ -135,7 +135,7 @@ main{
     position: absolute; top: 0; left: 0; right: 0;
     height: calc(100% - 100px); min-height: 300px;
     background: no-repeat center center / cover; background-attachment: fixed;
-    transition: 1s;
+    transition: opacity 1s;
 }
 .backPlaceholder{
     position: relative; top: 0; left: 0; right: 0;
@@ -219,6 +219,7 @@ header.scroll .menuBtn:hover{
     height: 120px; width: 120px;
     margin: 0px 10px;
     border-radius: 50%;
+    transition: 0.2s;
 }
 .promotionBtn.real{
     display: table; z-index: 100;
@@ -230,6 +231,9 @@ header.scroll .menuBtn:hover{
 .promotionBtn.real:hover{
     background: linear-gradient(rgb(30,30,30), rgb(60,60,60)) !important;
     cursor: pointer;
+}
+.promotionBtn.real:hover{
+    height: 80px;
 }
 .promotionBtn.scroll {
     display: table;
@@ -243,4 +247,30 @@ header.scroll .menuBtn:hover{
     main{
         width: 100%;
     }
+}
+@media screen and (max-width: 720px){
+    .background{
+        height: 400px;
+    }
+    .backPlaceholder{
+        height: 400px;
+    }
+}
+
+@font-face{
+    font-family: "The Next Font";
+    src: url(Resources/Common/Fonts/the_next_font/TheNextFont.ttf)
+}
+@font-face{
+    font-family: "NEXT ART";
+    src: url('Resources/Common/Fonts/next_art/NEXT ART_Thin.otf');
+}
+@font-face{
+    font-family: "NEXT ART";
+    src: url('Resources/Common/Fonts/next_art/NEXT ART_Bold.otf');
+    font-weight: bold;
+}
+@font-face{
+    font-family: Gravity;
+    src: url(Resources/Common/Fonts/gravity/Gravity-Regular.otf)
 }

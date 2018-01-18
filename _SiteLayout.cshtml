@@ -4,6 +4,7 @@
         <title>@Page.Title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/common.css" />
+        <link rel="icon" href="~/Resources/Common/Favicon/falkarna-logo.png.ico" type="image/gif">
         <script src="/addStylsheet.js"></script>
         @RenderSection("head", required: false)
     </head>
@@ -56,39 +57,41 @@
         <main>
             @RenderBody()
         </main>
-        <footer>
-            <div class="pageWidth fullHeight">
-                <div class="footerPush">
-                    <div class="footerContentWrap">
-                        <div class="footerTitle">
-                            <a href="/index.cshtml">
-                                <div class="footerLogo"></div>
-                                <!--<div class="title">Falkarna Syd</div>-->
-                            </a>
-                        </div>
-                        <div class="footerPush">
-                            <table class="contactInfo float-right">
-                                <tr>
-                                    <td>E-Postadress</td>
-                                    <td>falkarna@falkarna-ofk.se</td>
-                                </tr>
-                                <tr>
-                                    <td>Medlemskap</td>
-                                    <td>123 287 67 79</td>
-                                </tr>
-                                <tr>
-                                    <td>Försäljning</td>
-                                    <td>123 274 01 40</td>
-                                </tr>
-                                <tr>
-                                    <td>Tifo och övriga bidrag</td>
-                                    <td>123 560 02 67</td>
-                                </tr>
-                            </table>
+        <!--
+            <footer>
+                <div class="pageWidth fullHeight">
+                    <div class="footerPush">
+                        <div class="footerContentWrap">
+                            <div class="footerTitle">
+                                <a href="/index.cshtml">
+                                    <div class="footerLogo"></div>
+                                    
+                                </a>
+                            </div>
+                            <div class="footerPush">
+                                <table class="contactInfo float-right">
+                                    <tr>
+                                        <td>E-Postadress</td>
+                                        <td>falkarna@falkarna-ofk.se</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Medlemskap</td>
+                                        <td>123 287 67 79</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Försäljning</td>
+                                        <td>123 274 01 40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tifo och övriga bidrag</td>
+                                        <td>123 560 02 67</td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
+        --><!--<div class="title">Falkarna Syd</div>-->
     </body>
 </html>

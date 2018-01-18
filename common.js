@@ -1,9 +1,12 @@
-﻿var header = document.getElementsByTagName("header")[0];
+﻿document.body.onresize = bodyResize;
+
+var header = document.getElementsByTagName("header")[0];
 var headerSection = document.getElementsByClassName("headerSection");
 var promotionBtn = document.getElementsByClassName("promotionBtn");
 var promoPlaceholder = document.getElementById("promoPlaceholder");
 var backImg = document.getElementsByClassName("background");
 var mediaCanvasCont = document.getElementById("mediaCanvasCont");
+var mediaCanvasWrap = document.getElementById("mediaCanvasWrap");
 var mediaCanvas = document.getElementById("mediaCanvas");
 
 var backupidx;
@@ -26,46 +29,6 @@ var galIdx = 0;
 var imgIdxel = document.getElementsByClassName("imgIdx");
 
 slideShow(false);
-
-/*var currentScrollPos = document.documentElement.scrollTop;
-var isTrue = true;*/
-
-/*document.body.onscroll = function () {
-    if (document.documentElement.clientWidth > 1000) {
-        if (document.documentElement.scrollTop > 0) {
-            for (var i = 0; i < headerSection.length; i++) {
-                headerSection[i].classList.add("scroll");
-                promotionBtn[i].classList.add("scroll");
-            }
-            headerSection[1].classList.add("float-right");
-            document.getElementsByTagName("header")[0].classList.add("scroll");
-        } else {
-            for (var i = 0; i < headerSection.length; i++) {
-                headerSection[i].classList.remove("scroll");
-                promotionBtn[i].classList.remove("scroll");
-            }
-            headerSection[1].classList.remove("float-right");
-            document.getElementsByTagName("header")[0].classList.remove("scroll");
-        }
-    } else {
-        if (document.documentElement.scrollTop > headerSection[0].offsetHeight) {
-            header.style.position = "fixed";
-            header.style.top = "-" + headerSection[0].offsetHeight + "px";
-        } else {
-            header.style.position = "absolute";
-            header.style.top = "0";
-        }
-    }*/
-    /*if (document.documentElement.scrollTop < currentScrollPos) {
-        if (isTrue == true) {
-            header.style.position = "absolute";
-            header.style.top = document.documentElement.scrollTop - headerSection[0].offsetHeight + "px";
-            isTrue = false;
-        }
-    } else {
-        istrue = true;
-    }
-    currentScrollPos = document.documentElement.scrollTop;*/
 
 document.body.onscroll = function () {
     if (document.documentElement.scrollTop > 0) {
@@ -105,10 +68,45 @@ function openCanvas() {
     document.body.style.overflow = "hidden";
     mediaCanvasCont.style.display = "block";
     mediaCanvas.style.backgroundImage = "url(Resources/Gallery/gal" + (galIdx + 1) + ".jpg)";
+    imgIdxel[0].innerHTML = (galIdx + 1) + "/" + imgGallery.length;
+    canvasResize();
 }
 function closeCanvas() {
     galIdx = backupidx;
     document.body.style.overflow = "initial";
     mediaCanvasCont.style.display = "none";
     mediaCanvas.style.backgroundImage = "";
+}
+
+function bodyResize() {
+    canvasResize();
+}
+
+function canvasResize() {
+    if (window.innerWidth > 800) {
+        if (window.innerHeight < window.innerWidth * 0.5625) {
+            mediaCanvas.style.height = "80%";
+            //mediaCanvas.style.width = "auto";
+            mediaCanvas.style.paddingBottom = "0px";
+            mediaCanvasWrap.style.width = mediaCanvas.offsetHeight * 1.778 + "px";
+        } else {
+            mediaCanvas.style.height = "auto";
+            mediaCanvas.style.width = "100%";
+            mediaCanvas.style.paddingBottom = "56.25%";
+            mediaCanvasWrap.style.width = "80%";
+        }
+    } else {
+        if (window.innerHeight < window.innerWidth * 0.5625) {
+            mediaCanvas.style.height = "100%";
+            mediaCanvas.style.width = "auto";
+            mediaCanvas.style.paddingBottom = "0px";
+            mediaCanvasWrap.style.width = imgCanvas.offsetHeight * 1.778 + "px";
+
+        } else {
+            mediaCanvas.style.height = "auto";
+            mediaCanvas.style.width = "100%";
+            mediaCanvas.style.paddingBottom = "56.25%";
+            mediaCanvasWrap.style.width = "100%";
+        }
+    }
 }
