@@ -4,7 +4,22 @@ var promotionBtn = document.getElementsByClassName("promotionBtn");
 var promoPlaceholder = document.getElementById("promoPlaceholder");
 var backImg = document.getElementsByClassName("background");
 var imgIdx = 0;
-var images = ["back1.jpg", "back2.jpg"];
+var imgCanvas = document.getElementById("imgCanvas");
+var imgGallery = [
+    "gal1.jpg",
+    "gal2.jpg",
+    "gal3.jpg",
+    "gal4.jpg",
+    "gal5.jpg",
+    "gal6.jpg",
+    "gal7.jpg",
+    "gal8.jpg",
+    "gal9.jpg",
+    "gal10.jpg",
+    "gal11.jpg",
+];
+var galIdx = 0;
+var imgIdxel = document.getElementById("imgIdx");
 
 slideShow(false);
 
@@ -61,9 +76,22 @@ function slideShow(x) {
         for (var i = 0; i < backImg.length; i++) {
             backImg[i].style.opacity = "0";
         }
+        imgIdx++;
+        if (imgIdx > backImg.length - 1) { imgIdx = 0 }
+        backImg[imgIdx].style.opacity = "1";
     }
-    imgIdx++;
-    if (imgIdx > backImg.length - 1) { imgIdx = 0 }
-    backImg[imgIdx].style.opacity = "1";
     setTimeout(slideShow, 5000);
+}
+
+function nextImg() {
+    galIdx++;
+    if (galIdx > imgGallery.length - 1) { galIdx = 0 }
+    imgCanvas.style.backgroundImage = "url(Resources/Gallery/gal" + (galIdx + 1) + ".jpg)";
+    imgIdxel.innerHTML = galIdx + 1;
+}
+function prevImg() {
+    galIdx--;
+    if (galIdx < 0) { galIdx = imgGallery.length - 1 }
+    imgCanvas.style.backgroundImage = "url(Resources/Gallery/gal" + (galIdx + 1) + ".jpg)";
+    imgIdxel.innerHTML = galIdx + 1;
 }

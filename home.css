@@ -61,12 +61,12 @@ section h1{
     display: table;
     position: relative;
     width: 100%; height: 100%; box-sizing: border-box;
-    background: url(Resources/Common/Background/17620231_1662660520702364_8868683187457929661_o.jpg) no-repeat center center / cover;
+    background: url(Resources/Gallery/gal1.jpg) no-repeat center center / cover;
 }
 .navBtn{
     position: absolute; top: calc(50% - 25px);
     width: 40px; height: 60px;
-    background: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.8);
     font-size: 16px; color: black;
     line-height: 60px; text-align: center;
     transition: 0.2s;
