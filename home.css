@@ -22,12 +22,12 @@ section.dark .sectionTitle.sub{
 .sectionWrap{
     display: table;
     position: relative;
-    width: 850px; box-sizing: border-box;
+    width: 1140px; box-sizing: border-box;
     margin: 20px auto;
 }
 .sectionWrap.top{
     width: 1200px;
-    margin-top: -250px;
+    /*margin-top: -250px;*/
 }
 .sectionTitle{
     margin-top: 20px;
@@ -67,70 +67,68 @@ section h1{
     line-height: 1.6;
 
 }
+
 .contentImg{
-    display: table;
     position: absolute; top: calc(50% - 150px); right: 0;
     width: calc(100% - 560px); height: 400px; box-sizing: border-box;
     padding: 50px;
 }
-
-
 #imgCanvas{
     display: table;
     position: relative;
     width: 100%; height: 100%; box-sizing: border-box;
     background: url(Resources/Gallery/gal1.jpg) no-repeat center center / cover;
 }
-.navBtn{
-    position: absolute; top: calc(50% - 25px);
-    width: 40px; height: 60px;
-    background: rgba(255,255,255,0.8);
-    font-size: 16px; color: black;
-    line-height: 60px; text-align: center;
-    transition: 0.2s;
-    user-select: none;
-}
-.navBtn:hover{
-    background: rgba(255,255,255,1);
-    cursor: pointer;
-}
-.navBtn.next{
-    right: 0;
-}
-.navBtn.prev{
-    left: 0;
-}
-.imgIdx{
-    position: absolute; bottom: 5px; left: calc(50% - 5px);
-    width: 50px; height: 20px;
-    font-family: Gravity; font-size: 15px; color: white; text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
-    line-height: 20px; text-align: center;
-}
-#enlargeCanvasCont{
-    position: absolute; top: 0; right: 40px; bottom: 0; left: 40px;
-    cursor: pointer;
-}
-#enlargeCanvasCont:hover #enlargeCanvasbtn{
-    display: table;
-}
-#enlargeCanvasWrap {
-    display: table;
-    position: relative;
-    height: 100%;
-    margin: auto;
-}
-#enlargeCanvasPush{
-    display: table-cell; vertical-align: middle;
-    position: relative;
-    height: 100%;
-}
-#enlargeCanvasbtn{
-    display: none;
-    padding: 10px 15px;
-    background: white;
-    font-family: 'The Next Font'; font-size: 17px;
-    user-select: none;
-}
+    .navBtn{
+        position: absolute; top: calc(50% - 25px);
+        width: 40px; height: 60px;
+        background: rgba(255,255,255,0.8);
+        font-size: 16px; color: black;
+        line-height: 60px; text-align: center;
+        transition: 0.2s;
+        user-select: none;
+    }
+    .navBtn:hover{
+        background: rgba(255,255,255,1);
+        cursor: pointer;
+    }
+        .navBtn.next{
+            right: 0;
+        }
+        .navBtn.prev{
+            left: 0;
+        }
+    .imgIdx{
+        position: absolute; bottom: 5px; left: calc(50% - 5px);
+        width: 50px; height: 20px;
+        font-family: Gravity; font-size: 15px; color: white; text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+        line-height: 20px; text-align: center;
+    }
+    #enlargeCanvasCont{
+        position: absolute; top: 0; right: 40px; bottom: 0; left: 40px;
+        cursor: pointer;
+    }
+    #enlargeCanvasCont:hover #enlargeCanvasbtn{
+        display: table;
+    }
+        #enlargeCanvasWrap {
+            display: table;
+            position: relative;
+            height: 100%;
+            margin: auto;
+        }
+        #enlargeCanvasPush{
+            display: table-cell; vertical-align: middle;
+            position: relative;
+            height: 100%;
+        }
+            #enlargeCanvasbtn{
+                display: none;
+                padding: 10px 15px;
+                background: white;
+                font-family: 'The Next Font'; font-size: 17px;
+                user-select: none;
+            }
 
 
 
@@ -179,6 +177,11 @@ section h1{
 }
 
 
+@media screen and (max-width: 1400px){
+    .sectionWrap{
+        width: 850px;
+    }
+}
 @media screen and (max-width: 1300px){
     .sectionWrap.top{
         width: 980px; box-sizing: border-box;

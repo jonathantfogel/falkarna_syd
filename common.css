@@ -139,7 +139,7 @@ main{
 }
 .backPlaceholder{
     position: relative; top: 0; left: 0; right: 0;
-    height: calc(100% - 100px); min-height: 300px;
+    height: calc(100% - 350px); min-height: 300px;
 }
 
 
@@ -176,6 +176,7 @@ footer{
     width: 400px;
 }
 .contactInfo{
+    float: right;
     font-family: Gravity;
 }
 .contactInfo tr td:nth-of-type(2){
@@ -247,13 +248,45 @@ header.scroll .menuBtn:hover{
     main{
         width: 100%;
     }
+    .pageWidth{
+        width: 100%;
+    }
+    .footerContentWrap{
+        box-sizing: border-box;
+        padding: 0px 40px;
+    }
+    .footerTitle{
+        display: none;
+    }
+    .footerContentWrap{
+        width: auto;
+        margin: auto;
+    }
+    .contactInfo{
+        float: none;
+    }
 }
 @media screen and (max-width: 720px){
     .background{
         height: 400px;
     }
     .backPlaceholder{
-        height: 400px;
+        height: 150px; min-height: 0px;
+    }
+}
+@media screen and (max-width: 500px){
+    .contactInfo{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 400px){
+    .contactInfo{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 300px){
+    .contactInfo{
+        font-size: 8px;
     }
 }
 

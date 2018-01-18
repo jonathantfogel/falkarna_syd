@@ -31,7 +31,7 @@ var imgIdxel = document.getElementsByClassName("imgIdx");
 slideShow(false);
 
 document.body.onscroll = function () {
-    if (document.documentElement.scrollTop > 0) {
+    if (document.documentElement.scrollTop > 0 || document.body.scrollTop > 0) {
         header.classList.add("scroll");
     } else {
         header.classList.remove("scroll")
@@ -73,7 +73,7 @@ function openCanvas() {
 }
 function closeCanvas() {
     galIdx = backupidx;
-    document.body.style.overflow = "initial";
+    document.body.style.overflow = "auto";
     mediaCanvasCont.style.display = "none";
     mediaCanvas.style.backgroundImage = "";
 }
