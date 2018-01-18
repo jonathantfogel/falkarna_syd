@@ -3,6 +3,9 @@ var headerSection = document.getElementsByClassName("headerSection");
 var promotionBtn = document.getElementsByClassName("promotionBtn");
 var promoPlaceholder = document.getElementById("promoPlaceholder");
 var backImg = document.getElementsByClassName("background");
+var mediaCanvasCont = document.getElementById("mediaCanvasCont");
+var mediaCanvas = document.getElementById("mediaCanvas");
+
 var imgIdx = 0;
 var imgCanvas = document.getElementById("imgCanvas");
 var imgGallery = [
@@ -87,11 +90,17 @@ function nextImg() {
     galIdx++;
     if (galIdx > imgGallery.length - 1) { galIdx = 0 }
     imgCanvas.style.backgroundImage = "url(Resources/Gallery/gal" + (galIdx + 1) + ".jpg)";
-    imgIdxel.innerHTML = galIdx + 1;
+    imgIdxel.innerHTML = (galIdx + 1) + "/" + imgGallery.length;
 }
 function prevImg() {
     galIdx--;
     if (galIdx < 0) { galIdx = imgGallery.length - 1 }
     imgCanvas.style.backgroundImage = "url(Resources/Gallery/gal" + (galIdx + 1) + ".jpg)";
-    imgIdxel.innerHTML = galIdx + 1;
+    imgIdxel.innerHTML = (galIdx + 1) + "/" + imgGallery.length;
+}
+
+function openCanvas() {
+    document.body.style.overflow = "hidden";
+    mediaCanvasCont.style.display = "block";
+    mediaCanvas.style.backgroundImage = "url(Resources/Gallery/gal" + (galIdx + 1) + ".jpg)";
 }
