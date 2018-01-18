@@ -4,43 +4,113 @@
     width: 100%; box-sizing: border-box;
     margin: 20px auto;
 }
-section.gray{
+section.dark{
     background: rgb(60,60,60);
+}
+section.dark .sectionTitle{
+    color: white;
+}
+section.dark .sectionTitle.sub{
+    color: rgb(200,200,200);
 }
 .sectionWrap{
     display: table;
     position: relative;
-    width: calc(100% - 200px); box-sizing: border-box;
+    width: 850px; box-sizing: border-box;
     margin: 20px auto;
 }
-.sectionTitleCont{
+.sectionWrap.top{
+    width: 1200px;
+    margin-top: -250px;
+}
+section h1{
+    padding: 0px; margin: 0px;
+    font-family: 'The Next Font'; font-size: 35px;
+    line-height: 40px; 
+}
+.content{
+    display: table;
+    position: relative;
+    width: 100%;
+    margin-top: 25px; margin-bottom: 25px;
+}
+
+#pageTitle{
+    display: table;
+    padding: 20px 30px;
+    background: white;
+}
+.content.top{
     
 }
-.titleImg{
-    display: none;
-    float: left;
-    width: 160px; height: 160px;
-    background-color: rgb(224,72,72) !important;
-    border-radius: 50%;
+.content.wrap{
+    width: 500px;
+    padding: 20px 30px; margin: 0px !important;
+    background: white;
+    font-family: Gravity; font-size: 16px; color: rgb(40,40,40);
+    line-height: 1.6;
+
 }
+.contentImg{
+    display: table;
+    position: absolute; top: calc(50% - 150px); right: 0;
+    width: calc(100% - 560px); height: 400px; box-sizing: border-box;
+    padding: 50px;
+}
+#imgCanvas{
+    display: table;
+    position: relative;
+    width: 100%; height: 100%; box-sizing: border-box;
+    background: url(Resources/Common/Background/17620231_1662660520702364_8868683187457929661_o.jpg) no-repeat center center / cover;
+}
+.navBtn{
+    position: absolute; top: calc(50% - 25px);
+    width: 40px; height: 60px;
+    background: rgba(255,255,255,0.4);
+    font-size: 16px; color: black;
+    line-height: 60px; text-align: center;
+    transition: 0.2s;
+    user-select: none;
+}
+.navBtn:hover{
+    background: rgba(255,255,255,1);
+    cursor: pointer;
+}
+.navBtn.next{
+    right: 0;
+}
+.navBtn.prev{
+    left: 0;
+}
+#imgIdx{
+    position: absolute; bottom: 5px; left: calc(50% - 5px);
+    width: 20px; height: 20px;
+    font-family: Gravity; font-size: 15px; color: white; text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+    line-height: 20px;
+}
+
+
+
+.content.wide{
+    width: 100%;
+}
+
+
+
 .sectionTitle{
     margin-top: 20px;
     font-family: 'The Next Font'; font-size: 40px;
     line-height: 50px; 
 }
-.sectionTitle.white {
-    color: white;
-}
 .sectionTitle.sub{
     margin: 10px 0px;
-    font-family: Gravity; font-size: 15px; color: rgb(200,200,200);
+    font-family: Gravity; font-size: 15px; color: rgb(90,90,90);
     line-height: 15px; text-transform: uppercase; font-weight: bold; text-indent: 10px;
 }
 .content{
     display: table;
     position: relative;
     width: 100%;
-    margin: 25px auto;
 }
 .content.wide{
     width: 100%;

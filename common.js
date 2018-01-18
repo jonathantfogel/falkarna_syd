@@ -3,8 +3,10 @@ var headerSection = document.getElementsByClassName("headerSection");
 var promotionBtn = document.getElementsByClassName("promotionBtn");
 var promoPlaceholder = document.getElementById("promoPlaceholder");
 var backImg = document.getElementsByClassName("background");
-
+var imgIdx = 0;
 var images = ["back1.jpg", "back2.jpg"];
+
+slideShow(false);
 
 /*var currentScrollPos = document.documentElement.scrollTop;
 var isTrue = true;*/
@@ -52,4 +54,16 @@ document.body.onscroll = function () {
     } else {
         header.classList.remove("scroll")
     }
+}
+
+function slideShow(x) {
+    if (x == null) {
+        for (var i = 0; i < backImg.length; i++) {
+            backImg[i].style.opacity = "0";
+        }
+    }
+    imgIdx++;
+    if (imgIdx > backImg.length - 1) { imgIdx = 0 }
+    backImg[imgIdx].style.opacity = "1";
+    setTimeout(slideShow, 5000);
 }
