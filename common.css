@@ -45,6 +45,9 @@ header{
     width: 100%; height: 50%; box-sizing: border-box;
     margin: auto;
 }
+.headerSection.pageTtitle{
+    margin-left: 20px;
+}
 .headerPush{
     display: table-cell; vertical-align: middle;
     position: relative;
@@ -71,11 +74,17 @@ header{
 .menuBtn:hover{
     color: rgb(220,220,220)!important;
 }
+.menuBtn.promo{
+    background: linear-gradient(rgb(0,0,0), rgb(30,30,30)) !important;
+    color: white; font-family: 'NEXT ART'; font-size: 14px; font-weight: bold;
+    text-align: center;
+
+}
 .logo{
     float: left;
     width: 162px; height: 40px;
     background: url(/Resources/Common/falkarna-weblogo-retina-white.png) no-repeat center center / contain;
-    transition: all 0.3s linear;
+    transition: background 0.3s linear;
 }
 .title{
     display: table;
@@ -193,7 +202,6 @@ header.scroll{
     float: left;
     width: auto; height: inherit;
     background: transparent !important;
-    transition: height 1s;
 }
 header.scroll .logo{
     background-image: url(Resources/Common/falkarna-weblogo-retina.png);
@@ -243,14 +251,56 @@ header.scroll .menuBtn:hover{
     border-radius: 0;
 }
 
+#mBtn{
+    display: none;
+}
+#mpromotionBtn{
+    display: table;
+    position: relative;
+    height: 70px;
+    padding: 0px 20px;
+    background: linear-gradient(rgb(0,0,0), rgb(30,30,30)) !important;
+    color: white; font-family: 'NEXT ART'; font-size: 14px; font-weight: bold;
+    text-align: center;
+}
+#mpromotionBtn:hover{
+    background: linear-gradient(rgb(30,30,30), rgb(60,60,60)) !important;
+    cursor: pointer;
+}
+
 
 @media screen and (max-width: 1000px){
+    /*HEADER*/
+    header{
+        height: 50px;
+    }
+    .headerWrap{
+        width: 100px;
+    }
+    .title{
+        display: none;
+    }
+    .logo{
+        height: 30px; width: inherit;
+    }
+    .promotionBtn.scroll{
+        display: none;
+    }
+    #mBtn{
+        display: table;
+    }
+    #mpromotionBtn{
+        height: 50px;
+        margin-right: 5px;
+    }
+    /*MAIN*/
     main{
         width: 100%;
     }
     .pageWidth{
         width: 100%;
     }
+    /*FOOTER*/
     .footerContentWrap{
         box-sizing: border-box;
         padding: 0px 40px;
@@ -266,7 +316,31 @@ header.scroll .menuBtn:hover{
         float: none;
     }
 }
+@media screen and (max-width: 900px){
+}
 @media screen and (max-width: 720px){
+    /*HEADER*/
+    header{
+        height: 40px;
+    }
+    .headerWrap{
+        width: 80px;
+    }
+    .title{
+        display: none;
+    }
+    .logo{
+        height: 20px; width: inherit;
+    }
+    .menuBtn{
+        padding: 0px 5px; margin: 0px 10px;
+        font-size: 14px;
+    }
+    #mpromotionBtn{
+        height: 40px;
+        font-size: 11px;
+    }
+
     .background{
         height: 400px;
     }
@@ -275,6 +349,29 @@ header.scroll .menuBtn:hover{
     }
 }
 @media screen and (max-width: 500px){
+    /*HEADER*/
+    header{
+        height: 40px;
+    }
+    .headerWrap{
+        width: 50px;
+    }
+    .title{
+        display: none;
+    }
+    .logo{
+        height: 20px; width: inherit;
+    }
+    .menuBtn{
+        margin: 0px 5px;
+        font-size: 10px;
+    }
+    #mpromotionBtn{
+        height: 40px;
+        padding: 0px 10px;
+        font-size: 8px;
+    }
+    /*FOOTER*/
     .contactInfo{
         font-size: 14px;
     }
@@ -284,7 +381,30 @@ header.scroll .menuBtn:hover{
         font-size: 10px;
     }
 }
-@media screen and (max-width: 300px){
+@media screen and (max-width: 350px){
+    /*HEADER*/
+    header{
+        height: 30px;
+    }
+    .headerWrap{
+        width: 30px;
+    }
+    .title{
+        display: none;
+    }
+    .logo{
+        height: 15px; width: inherit;
+    }
+    .menuBtn{
+        margin: 0px 0px;
+        font-size: 9px;
+    }
+    #mpromotionBtn{
+        height: 30px;
+        padding: 0px 8px;
+        font-size: 7px;
+    }
+
     .contactInfo{
         font-size: 8px;
     }

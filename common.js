@@ -8,6 +8,8 @@ var backImg = document.getElementsByClassName("background");
 var mediaCanvasCont = document.getElementById("mediaCanvasCont");
 var mediaCanvasWrap = document.getElementById("mediaCanvasWrap");
 var mediaCanvas = document.getElementById("mediaCanvas");
+var promotionBtn = document.getElementsByClassName("promotionBtn");
+var imgSource;
 
 var backupidx;
 var imgIdx = 0;
@@ -28,6 +30,7 @@ var imgGallery = [
 var galIdx = 0;
 var imgIdxel = document.getElementsByClassName("imgIdx");
 
+bodyResize();
 slideShow(false);
 
 document.body.onscroll = function () {
@@ -53,13 +56,15 @@ function slideShow(x) {
 function nextImg(canvasidx) {
     galIdx++;
     if (galIdx > imgGallery.length - 1) { galIdx = 0 }
-    imgCanvas[canvasidx].style.backgroundImage = "url(Resources/Gallery/gal" + (galIdx + 1) + ".jpg)";
+    if (canvasidx == 0) { imgSource = "Resources/Gallery/gal" } else { imgSource = "Resources/Gallery/mGal/gal" }
+    imgCanvas[canvasidx].style.backgroundImage = "url(" + imgSource + (galIdx + 1) + ".jpg)";
     imgIdxel[canvasidx].innerHTML = (galIdx + 1) + "/" + imgGallery.length;
 }
 function prevImg(canvasidx) {
     galIdx--;
     if (galIdx < 0) { galIdx = imgGallery.length - 1 }
-    imgCanvas[canvasidx].style.backgroundImage = "url(Resources/Gallery/gal" + (galIdx + 1) + ".jpg)";
+    if (canvasidx == 0) { imgSource = "Resources/Gallery/gal" } else { imgSource = "Resources/Gallery/mGal/gal" }
+    imgCanvas[canvasidx].style.backgroundImage = "url(" + imgSource + (galIdx + 1) + ".jpg)";
     imgIdxel[canvasidx].innerHTML = (galIdx + 1) + "/" + imgGallery.length;
 }
 

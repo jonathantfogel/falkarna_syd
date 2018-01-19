@@ -6,12 +6,13 @@
         <meta property="og:image" content="Resources/Common/og/og-image.jpg" />
         <link rel="stylesheet" href="/common.css" />
         <link rel="icon" href="~/Resources/Common/Favicon/falkarna-logo.png.ico" type="image/gif">
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
         <script src="/addStylsheet.js"></script>
         @RenderSection("head", required: false)
     </head>
     <body>
         <header>
-            <div class="headerSection scroll" style="background-color: white;">
+            <div class="headerSection scroll pageTtitle" style="background-color: white;" title="Falkarna Syd">
                 <div class="headerPush">
                     <a href="/index.cshtml">
                         <div class="headerWrap">
@@ -28,7 +29,17 @@
                     <nav>
                         <a href="#"><div class="menuBtn">Diskussion</div></a>
                         <a href="http://falkarna.quickbutik.com" target="_blank"><div class="menuBtn">Webbshop</div></a>
+                        <!--<a href="https://apply.cardskipper.se/eid" target="_blank"><div class="menuBtn">Gå med Idag!</div></a>-->
                     </nav>
+                </div>
+                <div id="mBtn">
+                    <a href="c" target="_blank">
+                        <div id="mpromotionBtn">
+                            <div class="promotionWrap">
+                                Gå med idag!
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </header>
