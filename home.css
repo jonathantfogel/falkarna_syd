@@ -41,7 +41,7 @@ section h1{
 }
 .sectionTitle.sub{
     margin: 10px 0px;
-    font-family: Gravity; font-size: 15px; color: rgb(90,90,90);
+    font-family: "Gravity"; font-size: 15px; color: rgb(90,90,90);
     line-height: 15px; text-transform: uppercase; font-weight: bold; text-indent: 10px;
 }
 
@@ -55,7 +55,7 @@ section h1{
     width: 100%;
 }
 .content p{
-    font-family: Gravity; font-size: 16px; color: rgb(40,40,40);
+    font-family: "Gravity"; font-size: 16px; color: rgb(40,40,40);
     line-height: 1.6;
 
 }
@@ -63,7 +63,7 @@ section h1{
     width: 500px;
     padding: 20px 30px; margin: 0px !important;
     background: white;
-    font-family: Gravity; font-size: 16px; color: rgb(40,40,40);
+    font-family: "Gravity"; font-size: 16px; color: rgb(40,40,40);
     line-height: 1.6;
 
 }
@@ -101,7 +101,7 @@ section h1{
     .imgIdx{
         position: absolute; bottom: 5px; left: calc(50% - 5px);
         width: 50px; height: 20px;
-        font-family: Gravity; font-size: 15px; color: white; text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+        font-family: "Gravity"; font-size: 15px; color: white; text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
         line-height: 20px; text-align: center;
     }
     #enlargeCanvasCont{

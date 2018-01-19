@@ -186,7 +186,7 @@ footer{
 }
 .contactInfo{
     float: right;
-    font-family: Gravity;
+    font-family: "Gravity";
 }
 .contactInfo tr td:nth-of-type(2){
     padding-left: 40px;
@@ -412,18 +412,21 @@ header.scroll .menuBtn:hover{
 
 @font-face{
     font-family: "The Next Font";
-    src: url(Resources/Common/Fonts/the_next_font/TheNextFont.ttf)
+    src: url(Resources/Common/Fonts/webfontkit-20180119-074805/thenextfont-webfont.woff) format("woff");
 }
 @font-face{
     font-family: "NEXT ART";
-    src: url('Resources/Common/Fonts/next_art/NEXT ART_Thin.otf');
+    src: url('Resources/Common/Fonts/next_art/NEXT ART_Thin.otf') format("otf");
+    src: url(Resources/Common/Fonts/webfontkit-20180119-074805/next_art_thin-webfont.woff) format("woff");
 }
 @font-face{
     font-family: "NEXT ART";
-    src: url('Resources/Common/Fonts/next_art/NEXT ART_Bold.otf');
+    src: url('Resources/Common/Fonts/next_art/NEXT ART_Bold.otf') format("otf");
+    src: url(Resources/Common/Fonts/webfontkit-20180119-074805/next_art_bold-webfont.woff) format("woff");
     font-weight: bold;
 }
 @font-face{
-    font-family: Gravity;
-    src: url(Resources/Common/Fonts/gravity/Gravity-Regular.otf)
+    font-family: "Gravity";
+    src: url(Resources/Common/Fonts/gravity/Gravity-Regular.otf) format("otf");
+    src: url(Resources/Common/Fonts/webfontkit-gravity/gravity-regular-webfont.woff) format("woff");
 }

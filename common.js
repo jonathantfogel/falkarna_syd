@@ -1,4 +1,5 @@
 ﻿document.body.onresize = bodyResize;
+document.documentElement.onscroll = menuSwitch;
 
 var header = document.getElementsByTagName("header")[0];
 var headerSection = document.getElementsByClassName("headerSection");
@@ -32,8 +33,10 @@ var imgIdxel = document.getElementsByClassName("imgIdx");
 
 bodyResize();
 slideShow(false);
-
 document.body.onscroll = function () {
+    menuSwitch();
+}
+function menuSwitch(){
     if (document.documentElement.scrollTop > 0 || document.body.scrollTop > 0) {
         header.classList.add("scroll");
     } else {
